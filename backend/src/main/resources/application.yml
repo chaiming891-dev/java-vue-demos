@@ -1,0 +1,27 @@
+# Lumen Desk is a local portfolio demo. All data is fictional.
+server:
+  port: 8080
+
+spring:
+  application:
+    name: lumen-desk-demo
+  datasource:
+    url: jdbc:h2:mem:lumendesk;DB_CLOSE_DELAY=-1;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: Asia/Shanghai
+
+app:
+  demo: true
